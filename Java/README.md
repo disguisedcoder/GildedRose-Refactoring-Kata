@@ -66,3 +66,6 @@ This test plan outlines the scenarios and edge cases covered by our unit tests:
 - starting quality at 0 and 50 → remains within [0,50]
 - immediate expired items (sellIn < 0) → apply post-expiry rules on first update
 - multi-day simulation to verify Backstage passes increments (+1 → +2 → +3)
+
+## Refactoring Summary (Exercise 7):
+We refactored the GildedRose class using the Strategy Pattern, creating individual updater classes for each item type. This makes the code modular, readable, and extensible. The behavior remains unchanged and is verified by the unit tests from Exercise 6. New item types can now be added by simply implementing a new ItemUpdater subclass.
